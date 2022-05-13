@@ -5,26 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas | Curso Practico de Javascript de Platzi</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-       <h1>Figuras Geometricas</h1> 
-       <p>Este es el primer taller del curso práctico de Javascript</p>
+        <div class="header-tittle-container">
+            <h1>Figuras Geometricas</h1> 
+            <p>Este es el primer taller del curso práctico de Javascript</p>
+        </div>
+       
     </header>
-    <section>
-        <h2>Calcula el área y perímetro de un cuadrado</h2>
+    <section class="square-container">
+        <img class="square-logo" src="https://es.seaicons.com/wp-content/uploads/2015/07/playstation-square-dark-icon.png" alt="icono de cuadrado de Playstarion">
         
-        <form action="">
+        <h2 class="square-subtittle">Calcula el área y perímetro de un cuadrado</h2>
+        
+        <form class="square-form" action="">
             <label for="inputCuadrado">Escribe cuánto mide cada lado de tu cuadrado:</label>
             <input id="inputCuadrado" type="number" />
-            <button type="button" onclick="calcularAreaCuadrado()">Calcular el Área</button>
-            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el Perímetro</button>
+            <div class="buttons-container">
+                <button type="button" onclick="calcularAreaCuadrado()">Calcular el Área</button>
+                 <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el Perímetro</button>
+            </div>
         </form>
-       
-
     </section>
-    
-
     <script src="./figuras.js"></script>
 </body>
 </html>

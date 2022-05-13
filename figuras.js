@@ -100,7 +100,7 @@ function calcularAreaCuadrado(){
     const input = document.getElementById("inputCuadrado");
     const value = input.value;
 
-    const area = areaCuadrado(value);
+    const area = areaCuadrado(value) + "cm^2";
     alert(area);
 }
 
@@ -108,6 +108,6 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("inputCuadrado");
     const value = input.value;
 
-    const perimetro = perimetroCuadrado(value);
+    const perimetro = perimetroCuadrado(value) + "cm";
     alert(perimetro);
 }
