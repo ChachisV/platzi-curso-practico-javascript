@@ -21,14 +21,61 @@
         <h2 class="square-subtittle">Calcula el área y perímetro de un cuadrado</h2>
         
         <form class="square-form" action="">
-            <label for="inputCuadrado">Escribe cuánto mide cada lado de tu cuadrado:</label>
+            <label for="inputCuadrado">Escribe en cm cuánto mide cada lado de tu cuadrado:</label>
             <input id="inputCuadrado" type="number" />
-            <div class="buttons-container">
+            <div class="square-buttons--container">
                 <button type="button" onclick="calcularAreaCuadrado()">Calcular el Área</button>
                  <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el Perímetro</button>
             </div>
         </form>
     </section>
+    <section class="triangle-container">
+        <img class="triangle-logo" src="https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-triangle-dark-icon.png" alt="icono de triangulo de Playstarion">
+        
+        <h2 class="triangle-subtittle">Calcula el área y perímetro de un Triángulo</h2>
+        
+        <form class="triangle-form" action="">
+            <label for="triangleSide1Input">Escribe en cm cuánto mide el lado 1 de tu triángulo:</label>
+            <input id="triangleSide1Input" type="number" />
+            <label for="triangleSide2Input">Escribe en cm cuánto mide el lado 2 de tu triángulo:</label>
+            <input id="triangleSide2Input" type="number" />
+            <label for="triangleBaseInput">Escribe en cm cuánto mide la base de tu triángulo:</label>
+            <input id="triangleBaseInput" type="number" />
+            <label for="triangleHeightInput">Escribe en cm cuánto mide la altura de tu triángulo:</label>
+            <input id="triangleHeightInput" type="number" />
+            <div class="triangle-buttons--container">
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular el Área</button>
+                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el Perímetro</button>
+            </div>
+        </form>
+    </section>
+    <section class="circle-container">
+        <img class="circle-logo" src="https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/256/playstation-circle-dark-icon.png" alt="icono de círculo de Playstarion">
+            
+            <h2 class="circle-subtittle">Calcula el área, perímetro y diametro de un Círculo</h2>
+            
+            <form class="circle-form" action="">
+                <label for="circleRadius">Escribe en cm cuánto mide el Radio de tu círculo:</label>
+                <input id="circleRadius" type="number" />
+                <div class="circle-buttons--container">
+                    <button type="button" onclick="calcularDiametroCirculo()">Calcular el Diámetro</button>
+                    <button type="button" onclick="calcularAreaCirculo()">Calcular el Área</button>
+                    <button type="button" onclick="calcularPerimetroCirculo()">Calcular el Perímetro</button>
+                </div>
+            </form>
+    </section>
+    <footer>
+        <h2>Made with <span>♥</span> by ChachisV</h2>
+        <section class="footer-container">
+            <div class="socialMedia">
+                <a href="https://www.linkedin.com/in/jaime-andr%C3%A9s-vanegas-99196967/">LinkedIn</a>
+                <a href="https://github.com/ChachisV">Github</a>
+                <a href="https://www.facebook.com/ChachisV94">Faceboook Gaming</a>
+            </div>
+            
+        </section>
+        
+    </footer>
     <script src="./figuras.js"></script>
 </body>
 </html>
