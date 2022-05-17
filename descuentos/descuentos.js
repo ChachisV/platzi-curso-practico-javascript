@@ -96,11 +96,66 @@
 
 // legibilidad, error first y muerte al switch
 
+// const coupons = [
+//     "ChachisV", 
+//     "SuperSaiyan", 
+//     "SuperChachisV",
+// ];
+
+// function calcularPrecioConDescuento(precio, descuento){
+//     const porcentajePrecioConDescuento = 100 - descuento;
+//     const precioConDescuento = (precio * porcentajePrecioConDescuento)/100;
+
+//     return precioConDescuento;
+// }
+
+
+// function onClickButtonPriceDiscount() {
+//     const inputPrice = document.getElementById("inputPrice");
+//     const priceValue = inputPrice.value;
+
+//     const inputCoupon = document.getElementById("inputCoupon");
+//     const couponValue = inputCoupon.value;
+
+//     let descuento;
+
+//     if (!coupons.includes(couponValue)){
+//         alert("El cupón " + couponValue + " no existe");
+//     }
+//     else if (couponValue === "ChachisV") {
+//         descuento = 15 
+//     }
+//     else if (couponValue === "SuperSaiyan") {
+//         descuento = 25 
+//     }
+//     else if (couponValue === "SuperChachisV") {
+//         descuento = 35 
+//     }
+//     const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
+
+//     const resultP = document.getElementById("resultP");
+//     resultP.innerText = "El precio con descuento es $" + precioConDescuento ;
+// }
+
+
+// Arrays y condicionales mucho mas inteligentes
+
 const coupons = [
-    "ChachisV", 
-    "SuperSaiyan", 
-    "SuperChachisV",
-];
+    {
+        name: "ChachisV", 
+        discount: 15, 
+    },
+    {
+        name: "SuperSaiyan", 
+        discount: 25, 
+    },
+    {
+        name: "SuperChachisV", 
+        discount: 35, 
+    },
+
+]
+
 
 function calcularPrecioConDescuento(precio, descuento){
     const porcentajePrecioConDescuento = 100 - descuento;
@@ -109,7 +164,6 @@ function calcularPrecioConDescuento(precio, descuento){
     return precioConDescuento;
 }
 
-
 function onClickButtonPriceDiscount() {
     const inputPrice = document.getElementById("inputPrice");
     const priceValue = inputPrice.value;
@@ -117,23 +171,19 @@ function onClickButtonPriceDiscount() {
     const inputCoupon = document.getElementById("inputCoupon");
     const couponValue = inputCoupon.value;
 
-    let descuento;
+const isCouponValueValid = function(coupon){
+    return coupon.name === couponValue;
+};
 
-    if (!coupons.includes(couponValue)){
-        alert("El cupón " + couponValue + " no existe");
-    }
-    else if (couponValue === "ChachisV") {
-        descuento = 15 
-    }
-    else if (couponValue === "SuperSaiyan") {
-        descuento = 25 
-    }
-    else if (couponValue === "SuperChachisV") {
-        descuento = 35 
-    }
+const userCoupon = coupons.find(isCouponValueValid);
 
+if (!userCoupon){
+    alert("El cupón " + couponValue + " no existe");
+} else {
+    const descuento = userCoupon.discount;
     const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
 
     const resultP = document.getElementById("resultP");
-    resultP.innerHTML = "El precio con descuento es $" + precioConDescuento ;
+    resultP.innerText = "El precio con descuento es $" + precioConDescuento ;
+}
 }
