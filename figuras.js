@@ -171,3 +171,29 @@ function calcularAreaCirculo(){
     alert(area);
 }
 
+// Triangulo isosceles
+
+function alturaIsosceles(lado1, lado2, base){
+    if(lado1 === lado2) {
+        return (Math.sqrt(Math.abs((lado1*lado2) - ((base*base)/ 4))));
+    }
+
+    else{
+        alert("No es un triángulo isósceles")
+    }
+    
+}
+
+function calcularAlturaIsosceles(){
+    const side1Input = document.getElementById("triangleSide1Input");
+    const side1Value = parseInt(side1Input.value);
+
+    const side2Input = document.getElementById("triangleSide2Input");
+    const side2Value = parseInt(side2Input.value);
+
+    const baseInput = document.getElementById("triangleBaseInput");
+    const baseValue = parseInt(baseInput.value);
+
+    const altura = alturaIsosceles(side1Value, side2Value, baseValue) + "cm";
+    alert(altura);
+}
