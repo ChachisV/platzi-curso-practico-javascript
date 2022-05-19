@@ -62,7 +62,7 @@ function calcularMediana(lista){
     }
 
     function calcularMediaAritmetica(lista){
-   
+
         const sumaLista = lista.reduce(
             function (valorAcumulado , nuevoElemento){
                 return valorAcumulado + nuevoElemento;
@@ -72,11 +72,7 @@ function calcularMediana(lista){
         const promedioLista = sumaLista / lista.length;
         
         return  promedioLista;
-
         }
-
-
-
 
     let mediana;
 
